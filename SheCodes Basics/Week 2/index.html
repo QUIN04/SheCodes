@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <title>Week1</title>
+    <style>
+        h1{
+color: blue;
+}
+
+h4{
+    color: blue;
+    width: 20px;
+    height: 20px;
+}
+
+em{
+    color: yellow;
+}
+
+button{
+    color: white;
+    background-color: blue;
+    border-radius: 30px;
+    border-color: blue;
+    height: 50px;
+    width: 150px;
+    cursor: pointer;    
+}
+li:hover {
+  background-color: beige;
+  height: 100px;
+  width: 300px;
+
+}
+li{
+      list-style: none;
+}
+button:hover{
+background-color: white;
+color: blue;
+}
+    </style>
+</head>
+<body>
+   <main>
+    <center>
+    
+    <h1>⛅ <br>
+        Currently 21&#176 in Tokyo</h1>
+    <h2>13&#176 / <strong>23&#176</strong></h2><br>
+<span>
+    <li><h3>🌨 Tommorow</h3>
+<p>10&#176 / <strong>22&#176</strong></p></li><br>
+<li><h3>🌥 Saturday</h3>
+<p>15&#176 / <strong>17&#176</strong></p></li><br>
+<li><h3><em>☀</em> Sunday</h3>
+<p>25&#176 / <strong>28&#176</strong></p></li>
+</span><br><br>
+<button>Change city</button><br>
+<p>Coded by Quinuel Ndip-Agbor</p>
+    </center>
+   </main>
+<script>
+    function changeCity(){
+        let city = prompt("Which city do you live in ?");
+        let temperature = prompt("What temperature is it ?")
+        if (temperature < 0){
+            alert("Cold");
+        }else{
+           let heading = document.querySelectors("h1");
+           heading.innerHTML = "😑<br/> Currently" + temperature + "\u00B0C in " + city;
+        }
+        let heading = document.querySelectors("h1");
+           heading.innerHTML = "😊<br/> Currently" + temperature + "\u00B0C in" + city;
+    }
+    let changeMyButton = document.querySelector("button");
+        changeMyButton.addEventListener("click",changeCity);
+    
+</script>
+</body>
+</html>
